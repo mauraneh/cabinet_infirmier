@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Nunito:400,700");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.informationHeader {
+  font-family: "Fjalla One";
+  background-color: #b1d8e4;
+  padding: 0.5rem;
+}
+.informationHeader .adresse {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.informationHeader .adresse a {
+  color: #fff;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoHeader img {
+  width: 30rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  background: #f9f9f9;
+  padding: 16px;
+}
+nav .menuItems {
+  list-style: none;
+  display: flex;
+}
+nav .menuItems li {
+  margin: 2rem;
+}
+nav .menuItems li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+nav .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: #022e76;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+nav .menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,115 @@
+@import '_reset', '_variables';
+
+//------------MIXIN---------------
+@mixin displayFlexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin displayFlexCenterBetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin displayFlexCenterEvenly{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@mixin displayFlexColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin displayFlexEnd{
+  display: flex;
+  justify-content: flex-end;
+}
+//---------------BODY-----------------
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+//---------------MAIN-----------------
+main {
+  flex: 1 0 auto;
+}
+//------------HEADER-------------------------------
+//------------INFORMATION---------
+.informationHeader{
+font-family: $font-subtitle;
+background-color: $color-header-bg;
+padding: .5rem;
+  .adresse{
+    @include displayFlexCenterEvenly;
+    a{
+      color: $color-header-txt-white;
+    }
+  }
+}
+//------------LOGO----------------
+.logoHeader{
+  @include displayFlexCenter;
+img{
+  width: 30rem;
+  }
+}
+nav {
+  @include displayFlexCenter;
+  margin: 25px;
+  background: $bg-grey;
+  padding: 16px;
+  .menuItems {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $txt-grey;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+
+        &::before {
+          content: attr(data-item);
+          transition: 0.5s;
+          color: $color-header-txt-blue;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 0;
+          overflow: hidden;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//------------MENU----------------
+//--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
+@media (min-width: 768px) {
+ 
+}
+//Big screen
+@media screen and (min-width: 992px) {
+  
+}
