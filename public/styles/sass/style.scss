@@ -59,6 +59,8 @@ img{
   width: 30rem;
   }
 }
+
+//------------MENU----------------
 nav {
   @include displayFlexCenter;
   margin: 25px;
@@ -72,10 +74,11 @@ nav {
       margin: 2rem;
 
       a {
+        font-family: $font-subtitle;
         text-decoration: none;
         color: $txt-grey;
         font-size: 1rem;
-        transition: all 0.3s ease-in-out;
+        transition: all 0s ease-in-out;
         position: relative;
         text-transform: uppercase;
 
@@ -95,16 +98,24 @@ nav {
         &:hover {
           &::before {
             width: 100%;
-            transition: all 0.3s ease-in-out;
+            transition: all 0s ease-in-out;
           }
         }
       }
     }
   }
 }
-
-
-//------------MENU----------------
+//------------MAIN---------------------------------------------
+//------------SLOGAN----------------
+.sloganMain{
+  @include displayFlexCenter;
+  margin: 3rem;
+  color: $color-logo;
+  font-weight: 600;
+  font-family: $font-title;
+  font-size: 4rem;
+  text-align: center;
+}
 //--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
 @media (min-width: 768px) {
  

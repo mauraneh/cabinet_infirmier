@@ -98,10 +98,11 @@ nav .menuItems li {
   margin: 2rem;
 }
 nav .menuItems li a {
+  font-family: "Fjalla One";
   text-decoration: none;
   color: #8f8f8f;
   font-size: 1rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0s ease-in-out;
   position: relative;
   text-transform: uppercase;
 }
@@ -119,7 +120,19 @@ nav .menuItems li a::before {
 }
 nav .menuItems li a:hover::before {
   width: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0s ease-in-out;
+}
+
+.sloganMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+  color: #022e76;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
