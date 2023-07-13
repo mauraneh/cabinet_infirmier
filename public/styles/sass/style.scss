@@ -34,6 +34,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  font-family: $font-main;
 }
 //---------------MAIN-----------------
 main {
@@ -115,6 +116,34 @@ nav {
   font-family: $font-title;
   font-size: 4rem;
   text-align: center;
+}
+//------------VALEURS----------------
+.valeurMain{
+  background-color: $bg-beige;
+  margin: 4rem 10rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .valeursCards{
+    @include displayFlexCenter;
+  }
+ .titleMain{
+  padding-top: 3rem;
+  text-align: center;
+  color: $color-logo;
+  font-size: 4rem;
+  font-weight: 600;
+ }
+ .valeurCard{
+  margin: 2rem;
+  img{
+    width: 17rem;
+  }
+  p{
+    padding: 3rem 1rem;
+    font-size: 1.5rem;
+    color: $color-header-txt-blue;
+    text-align: center;
+  }
+ }
 }
 //--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
 @media (min-width: 768px) {
