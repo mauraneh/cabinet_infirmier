@@ -167,4 +167,16 @@ nav .menuItems li a:hover::before {
   text-align: center;
 }
 
+------------------A PROPOS------------- .aProposMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+------------------A PROPOS------------- .aProposMain p {
+  padding: 3rem 1rem;
+  font-size: 1.5rem;
+  color: #022e76;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

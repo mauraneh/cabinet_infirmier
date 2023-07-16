@@ -145,6 +145,16 @@ nav {
   }
  }
 }
+------------------A PROPOS-------------
+.aProposMain{
+ @include displayFlexCenter;
+ p{
+  padding: 3rem 1rem;
+    font-size: 1.5rem;
+    color: $color-header-txt-blue;
+    text-align: center;
+ }
+}
 //--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
 @media (min-width: 768px) {
  
