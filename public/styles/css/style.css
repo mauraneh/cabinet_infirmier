@@ -76,6 +76,7 @@ main {
 }
 
 .logoHeader {
+  margin-top: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,41 +89,30 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 25px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   background: #f9f9f9;
-  padding: 16px;
+  opacity: 90%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 nav .menuItems {
   list-style: none;
   display: flex;
 }
 nav .menuItems li {
-  margin: 2rem;
+  margin: 1.5rem;
 }
 nav .menuItems li a {
   font-family: "Fjalla One";
   text-decoration: none;
   color: #8f8f8f;
   font-size: 1rem;
-  transition: all 0s ease-in-out;
-  position: relative;
   text-transform: uppercase;
 }
-nav .menuItems li a::before {
-  content: attr(data-item);
-  transition: 0.5s;
+nav .menuItems li a:hover {
   color: #022e76;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
-nav .menuItems li a:hover::before {
-  width: 100%;
-  transition: all 0s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .sloganMain {
@@ -167,16 +157,77 @@ nav .menuItems li a:hover::before {
   text-align: center;
 }
 
-------------------A PROPOS------------- .aProposMain {
+.aProposMain h2 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  color: #022e76;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.aProposMain .aProposCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.aProposMain .aProposCard .imgAPropos {
+  border-radius: 50%;
+  width: 22rem;
+  margin: 1rem 3rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.aProposMain .aProposCard .txtAPropos {
+  margin: 0 6rem;
+}
+.aProposMain .aProposCard .txtAPropos p {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  color: #022e76;
+  text-align: justify;
+}
+
+.txtBold {
+  font-weight: 900;
+}
+
+.lieuxMain {
+  background-color: #f5f5f5;
+  margin: 5rem 10rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.lieuxMain h2 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #022e76;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.lieuxMain .txtLieux {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.lieuxMain .txtLieux p {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-------------------A PROPOS------------- .aProposMain p {
-  padding: 3rem 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.3rem;
   color: #022e76;
-  text-align: center;
+  text-align: justify;
+}
+.lieuxMain .mapLieux {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.lieuxMain .mapLieux iframe {
+  margin: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 700px;
+  height: 550px;
 }
 
 /*# sourceMappingURL=style.css.map */

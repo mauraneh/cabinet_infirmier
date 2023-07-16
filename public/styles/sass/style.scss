@@ -55,6 +55,7 @@ padding: .5rem;
 }
 //------------LOGO----------------
 .logoHeader{
+  margin-top: 6rem;
   @include displayFlexCenter;
 img{
   width: 30rem;
@@ -64,43 +65,26 @@ img{
 //------------MENU----------------
 nav {
   @include displayFlexCenter;
-  margin: 25px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   background: $bg-grey;
-  padding: 16px;
+  opacity: 90%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   .menuItems {
     list-style: none;
     display: flex;
-
     li {
-      margin: 2rem;
-
+      margin: 1.5rem;
       a {
         font-family: $font-subtitle;
         text-decoration: none;
         color: $txt-grey;
         font-size: 1rem;
-        transition: all 0s ease-in-out;
-        position: relative;
         text-transform: uppercase;
-
-        &::before {
-          content: attr(data-item);
-          transition: 0.5s;
-          color: $color-header-txt-blue;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 0;
-          overflow: hidden;
-        }
-
         &:hover {
-          &::before {
-            width: 100%;
-            transition: all 0s ease-in-out;
-          }
+          color: $color-header-txt-blue;
+            transition: all .5s ease-in-out;
         }
       }
     }
@@ -145,15 +129,72 @@ nav {
   }
  }
 }
-------------------A PROPOS-------------
+//------------------A PROPOS-------------
 .aProposMain{
- @include displayFlexCenter;
- p{
-  padding: 3rem 1rem;
-    font-size: 1.5rem;
-    color: $color-header-txt-blue;
-    text-align: center;
+ h2{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  color: $color-logo;
+  font-size: 4rem;
+  font-weight: 600;
  }
+  .aProposCard{ 
+    @include displayFlexCenterEvenly();
+      .imgAPropos{
+        border-radius: 50%;
+        width: 22rem;
+        margin: 1rem 3rem;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      }
+      .txtAPropos{
+        margin: 0 6rem;
+        p{
+          padding: .5rem;
+          font-size: 1.3rem;
+          color: $color-header-txt-blue;
+          text-align: justify;
+        }
+      }
+      
+  }
+}
+//-----------OU NOUS TROUVER-----------
+.txtBold{
+  font-weight: 900;
+}
+.lieuxMain{
+  background-color: $bg-beige;
+  margin: 5rem 10rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  h2{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: $color-logo;
+  font-size: 4rem;
+  font-weight: 600;
+  }
+  .txtLieux{
+    margin: 2rem;
+    @include displayFlexCenterEvenly();
+    p{
+      @include displayFlexCenter();
+      padding: .5rem;
+      font-size: 1.3rem;
+      color: $color-header-txt-blue;
+      text-align: justify;
+    }
+  }
+  .mapLieux{
+    @include displayFlexCenterEvenly();
+    iframe{
+      margin: 3rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      width: 700px;
+      height: 550px;
+    }
+  }
 }
 //--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
 @media (min-width: 768px) {
