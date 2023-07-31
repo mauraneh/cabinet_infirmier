@@ -61,44 +61,33 @@ main {
   flex: 1 0 auto;
 }
 
-.informationHeader {
-  font-family: "Fjalla One";
-  background-color: #b1d8e4;
-  padding: 0.5rem;
-}
-.informationHeader .adresse {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.informationHeader .adresse a {
-  color: #fff;
-}
-
 .logoHeader {
-  margin-top: 6rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .logoHeader img {
-  width: 30rem;
+  width: 20rem;
 }
 
-nav {
+nav .menuBurger {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: #f9f9f9;
-  opacity: 90%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin: 1rem 0;
+  font-size: 3rem;
+  cursor: pointer;
 }
 nav .menuItems {
+  display: none;
   list-style: none;
-  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  background: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 nav .menuItems li {
   margin: 1.5rem;
@@ -110,10 +99,6 @@ nav .menuItems li a {
   font-size: 1rem;
   text-transform: uppercase;
 }
-nav .menuItems li a:hover {
-  color: #022e76;
-  transition: all 0.5s ease-in-out;
-}
 
 .sloganMain {
   display: flex;
@@ -123,13 +108,14 @@ nav .menuItems li a:hover {
   color: #022e76;
   font-weight: 600;
   font-family: "Oswald", sans-serif;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
 }
 
 .valeurMain {
+  width: auto;
   background-color: #f5f5f5;
-  margin: 4rem 10rem;
+  margin: 4rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .valeurMain .valeursCards {
@@ -141,8 +127,13 @@ nav .menuItems li a:hover {
   padding-top: 3rem;
   text-align: center;
   color: #022e76;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
+}
+.valeurMain .valeursCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .valeurMain .valeurCard {
   margin: 2rem;
@@ -162,7 +153,7 @@ nav .menuItems li a:hover {
   padding-bottom: 3rem;
   text-align: center;
   color: #022e76;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .aProposMain .aProposCard {
@@ -232,6 +223,110 @@ nav .menuItems li a:hover {
 
 .faqMain {
   padding: 5rem;
+}
+
+.informationFooter {
+  font-family: "Fjalla One";
+  background-color: #b1d8e4;
+  padding: 0.5rem;
+}
+.informationFooter .adresse {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.informationFooter .adresse a {
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .logoHeader {
+    margin-top: 6rem;
+  }
+  .logoHeader img {
+    width: 30rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f9f9f9;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    opacity: 90%;
+  }
+  nav .menuBurger {
+    display: none;
+  }
+  nav .menuItems {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  nav .menuItems li {
+    margin: 1.5rem;
+  }
+  nav .menuItems li a {
+    font-family: "Fjalla One";
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  nav .menuItems li a:hover {
+    color: #022e76;
+    transition: all 0.5s ease-in-out;
+  }
+  .sloganMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+  }
+  .valeurMain {
+    margin: 4rem 10rem;
+  }
+  .valeurMain .valeursCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .valeurMain .titleMain {
+    font-size: 4rem;
+  }
+  .valeurMain .valeursCards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .aProposMain h2 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 4rem;
+  }
+  .aProposMain .aProposCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .aProposMain .aProposCard .imgAPropos {
+    border-radius: 50%;
+    width: 22rem;
+    margin: 1rem 3rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .aProposMain .aProposCard .txtAPropos {
+    margin: 0 6rem;
+  }
+  .aProposMain .aProposCard .txtAPropos p {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    color: #022e76;
+    text-align: justify;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

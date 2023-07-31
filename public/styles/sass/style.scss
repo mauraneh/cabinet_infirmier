@@ -42,39 +42,31 @@ main {
 }
 //------------HEADER-------------------------------
 
-//------------INFORMATION---------
-.informationHeader{
-font-family: $font-subtitle;
-background-color: $color-header-bg;
-padding: .5rem;
-  .adresse{
-    @include displayFlexCenterEvenly;
-    a{
-      color: $color-header-txt-white;
-    }
-  }
-}
 //------------LOGO----------------
 .logoHeader{
-  margin-top: 6rem;
+  margin-top: 2rem;
   @include displayFlexCenter;
 img{
-  width: 30rem;
+  width: 20rem;
   }
 }
-
 //------------MENU----------------
 nav {
-  @include displayFlexCenter;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: $bg-grey;
-  opacity: 90%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  .menuBurger{
+    @include displayFlexCenter;
+    margin: 1rem 0;
+    font-size: 3rem;
+    cursor: pointer;
+  }
   .menuItems {
+    display: none;
     list-style: none;
-    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    background: $bg-grey;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     li {
       margin: 1.5rem;
       a {
@@ -83,10 +75,6 @@ nav {
         color: $txt-grey;
         font-size: 1rem;
         text-transform: uppercase;
-        &:hover {
-          color: $color-header-txt-blue;
-            transition: all .5s ease-in-out;
-        }
       }
     }
   }
@@ -99,13 +87,14 @@ nav {
   color: $color-logo;
   font-weight: 600;
   font-family: $font-title;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
 }
 //------------VALEURS----------------
 .valeurMain{
+  width: auto;
   background-color: $bg-beige;
-  margin: 4rem 10rem;
+  margin: 4rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   .valeursCards{
     @include displayFlexCenter;
@@ -114,8 +103,13 @@ nav {
   padding-top: 3rem;
   text-align: center;
   color: $color-logo;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
+ }
+ .valeursCards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  }
  .valeurCard{
   margin: 2rem;
@@ -137,7 +131,7 @@ nav {
   padding-bottom: 3rem;
   text-align: center;
   color: $color-logo;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
  }
   .aProposCard{ 
@@ -201,11 +195,112 @@ nav {
 .faqMain{
   padding: 5rem;
 }
+
+//------------FOOTER--------------
+//------------INFORMATION---------
+.informationFooter{
+  font-family: $font-subtitle;
+  background-color: $color-header-bg;
+  padding: .5rem;
+    .adresse{
+      @include displayFlexCenterEvenly;
+      a{
+        color: $color-header-txt-white;
+      }
+    }
+  }
 //--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
 @media (min-width: 768px) {
  
 }
 //Big screen
 @media screen and (min-width: 992px) {
-  
+  //------------LOGO----------------
+.logoHeader{
+  margin-top: 6rem;
+  img{
+    width: 30rem;
+    }
+  }
+  nav {
+    .menuBurger{
+      display: none;
+    }
+     @include displayFlexCenter;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $bg-grey;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  opacity: 90%;
+  .menuItems {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    li {
+      margin: 1.5rem;
+      a {
+        font-family: $font-subtitle;
+        text-decoration: none;
+        color: $txt-grey;
+        font-size: 1rem;
+        text-transform: uppercase;
+        &:hover {
+          color: $color-header-txt-blue;
+            transition: all .5s ease-in-out;
+        }
+      }
+    }
+  }
+}
+//------------MAIN---------------------------------------------
+//------------SLOGAN----------------
+.sloganMain{
+  @include displayFlexCenter;
+  font-size: 4rem;
+}
+
+//------------VALEURS----------------
+.valeurMain{
+  margin: 4rem 10rem;
+  .valeursCards{
+    @include displayFlexCenter;
+  }
+ .titleMain{
+  font-size: 4rem;
+ }
+ .valeursCards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ }
+}
+//------------------A PROPOS-------------
+.aProposMain{
+  h2{
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+   font-size: 4rem;
+  }
+   .aProposCard{ 
+     @include displayFlexCenterEvenly();
+       .imgAPropos{
+         border-radius: 50%;
+         width: 22rem;
+         margin: 1rem 3rem;
+         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+       }
+       .txtAPropos{
+         margin: 0 6rem;
+         p{
+           padding: .5rem;
+           font-size: 1.3rem;
+           color: $color-header-txt-blue;
+           text-align: justify;
+         }
+       }
+       
+   }
+ }
 }
