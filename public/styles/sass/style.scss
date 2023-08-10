@@ -52,23 +52,26 @@ img{
 }
 //------------MENU----------------
 nav {
+  z-index: 10;
   .menuBurger{
     @include displayFlexCenter;
     margin: 1rem 0;
     font-size: 3rem;
     cursor: pointer;
   }
-  .menuItems {
+  .hide{
     display: none;
+  }
+  .menuItems {
     list-style: none;
     flex-direction: column;
     text-align: center;
-    width: 50%;
-    margin: auto;
-    background: $bg-grey;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: .8rem;
     li {
-      margin: 1.5rem;
+      padding: 1rem;
+      background: $bg-grey;
+      margin: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       a {
         font-family: $font-subtitle;
         text-decoration: none;
@@ -186,6 +189,13 @@ nav {
       color: $color-header-txt-blue;
       text-align: justify;
     }
+    .adresse{
+      margin: 1rem;
+    }
+    i{
+      margin: .7rem;
+      font-size: 2rem;
+    }
   }
   .mapLieux{
     @include displayFlexCenterEvenly();
@@ -215,6 +225,7 @@ nav {
     .cardsFaq{
       margin: auto 0;
       .cardFaq{
+        z-index: 0;
         border: 1px solid rgba(255, 255, 255, .25);
         border-radius: 1rem;
         background-color: rgba(255, 255, 255, 0.45);
@@ -229,7 +240,7 @@ nav {
           font-weight: 600;
         }
         p{
-          font-size: 1rem;
+          font-size: 1.2rem;
           color: $color-header-txt-blue;
           margin: 1rem;
           text-align: justify;
@@ -237,20 +248,70 @@ nav {
       }
     }
 }
+//--------------CONTACTE------------
+.contact{
+  h2{
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: $color-logo;
+  }
+  a, p{
+    padding: 1rem;
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    color: $color-logo;
+    background-color: $color-bg-light-blue;
+  }
+  i{
+    margin: 5rem;
+    font-size: 4rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    color: $color-logo;
+  }
+}
+//------------HAUT DE PAGE---------
+.hautDePage{
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+  color: $color-header-txt-blue;
+  width: 3rem;
+  height: 3rem;
+  i{
+    color: $color-header-txt-blue;
+    font-size: 4rem;
+  }
+}
 
 //------------FOOTER--------------
 //------------INFORMATION---------
 .informationFooter{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   font-family: $font-subtitle;
   background-color: $color-header-bg;
   padding: .5rem;
     .adresse{
-      @include displayFlexCenterEvenly;
+      display: flex;
+      align-items:  center;
       a{
+        font-size: .9rem;
         color: $color-header-txt-white;
+        padding: .3rem;
+      }
+      .hide{
+        display: none;
       }
     }
   }
+
 //--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------------
 @media (min-width: 768px) {
  
@@ -282,6 +343,9 @@ nav {
     justify-content: space-around;
     li {
       margin: 1.5rem;
+      background: none;
+      box-shadow: none;
+      padding: 0;
       a {
         font-family: $font-subtitle;
         text-decoration: none;
@@ -381,5 +445,49 @@ nav {
 //----------FAQ---------------
 .faqMain{
   padding: 5rem;
+  p{
+    font-size: 1.5rem;
+  }
 }
+//--------------CONTACTE------------
+.contact{
+  h2{
+    padding-top: 3rem;
+  text-align: center;
+  color: $color-logo;
+  font-size: 3rem;
+  font-weight: 600;
+  }
+  a:hover{
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    
+  }
+}
+
+//------------FOOTER--------------
+//------------INFORMATION---------
+.informationFooter{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: $font-subtitle;
+  background-color: $color-header-bg;
+  padding: .5rem;
+    .adresse{
+      display: flex;
+      flex-direction: inherit;
+      justify-content: space-evenly;
+      align-items: center;
+      a{
+        color: $color-header-txt-white;
+      }
+      .hide{
+        display: block;
+      }
+    }
+  }
+
 }

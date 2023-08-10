@@ -71,6 +71,9 @@ main {
   width: 20rem;
 }
 
+nav {
+  z-index: 10;
+}
 nav .menuBurger {
   display: flex;
   align-items: center;
@@ -79,18 +82,20 @@ nav .menuBurger {
   font-size: 3rem;
   cursor: pointer;
 }
-nav .menuItems {
+nav .hide {
   display: none;
+}
+nav .menuItems {
   list-style: none;
   flex-direction: column;
   text-align: center;
-  width: 50%;
-  margin: auto;
-  background: #f9f9f9;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0.8rem;
 }
 nav .menuItems li {
-  margin: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 nav .menuItems li a {
   font-family: "Fjalla One";
@@ -211,6 +216,13 @@ nav .menuItems li a {
   color: #022e76;
   text-align: justify;
 }
+.lieuxMain .txtLieux .adresse {
+  margin: 1rem;
+}
+.lieuxMain .txtLieux i {
+  margin: 0.7rem;
+  font-size: 2rem;
+}
 .lieuxMain .mapLieux {
   display: flex;
   align-items: center;
@@ -242,6 +254,7 @@ nav .menuItems li a {
   margin: auto 0;
 }
 .faqMain .cardsFaq .cardFaq {
+  z-index: 0;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.45);
@@ -257,13 +270,54 @@ nav .menuItems li a {
   font-weight: 600;
 }
 .faqMain .cardsFaq .cardFaq p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #022e76;
   margin: 1rem;
   text-align: justify;
 }
 
+.contact h2 {
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #022e76;
+}
+.contact a, .contact p {
+  padding: 1rem;
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  color: #022e76;
+  background-color: #e2f7ff;
+}
+.contact i {
+  margin: 5rem;
+  font-size: 4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  color: #022e76;
+}
+
+.hautDePage {
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+  color: #022e76;
+  width: 3rem;
+  height: 3rem;
+}
+.hautDePage i {
+  color: #022e76;
+  font-size: 4rem;
+}
+
 .informationFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   font-family: "Fjalla One";
   background-color: #b1d8e4;
   padding: 0.5rem;
@@ -271,10 +325,14 @@ nav .menuItems li a {
 .informationFooter .adresse {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
 }
 .informationFooter .adresse a {
+  font-size: 0.9rem;
   color: #fff;
+  padding: 0.3rem;
+}
+.informationFooter .adresse .hide {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -306,6 +364,9 @@ nav .menuItems li a {
   }
   nav .menuItems li {
     margin: 1.5rem;
+    background: none;
+    box-shadow: none;
+    padding: 0;
   }
   nav .menuItems li a {
     font-family: "Fjalla One";
@@ -391,6 +452,42 @@ nav .menuItems li a {
   }
   .faqMain {
     padding: 5rem;
+  }
+  .faqMain p {
+    font-size: 1.5rem;
+  }
+  .contact h2 {
+    padding-top: 3rem;
+    text-align: center;
+    color: #022e76;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .contact a:hover {
+    color: red;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .informationFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: "Fjalla One";
+    background-color: #b1d8e4;
+    padding: 0.5rem;
+  }
+  .informationFooter .adresse {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .informationFooter .adresse a {
+    color: #fff;
+  }
+  .informationFooter .adresse .hide {
+    display: block;
   }
 }
 
