@@ -156,19 +156,20 @@ nav .menuItems li a {
   font-size: 3rem;
   font-weight: 600;
 }
-.aProposMain .aProposCard {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
 .aProposMain .aProposCard .imgAPropos {
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aProposMain .aProposCard .imgAPropos img {
+  margin: 3rem;
   border-radius: 50%;
-  width: 22rem;
-  margin: 1rem 3rem;
+  width: 15rem;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .aProposMain .aProposCard .txtAPropos {
-  margin: 0 6rem;
+  margin: 0 1rem;
 }
 .aProposMain .aProposCard .txtAPropos p {
   padding: 0.5rem;
@@ -183,7 +184,8 @@ nav .menuItems li a {
 
 .lieuxMain {
   background-color: #f5f5f5;
-  margin: 5rem 10rem;
+  margin: 0.5rem 1rem;
+  border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .lieuxMain h2 {
@@ -191,7 +193,7 @@ nav .menuItems li a {
   padding-bottom: 2rem;
   text-align: center;
   color: #022e76;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .lieuxMain .txtLieux {
@@ -205,7 +207,7 @@ nav .menuItems li a {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #022e76;
   text-align: justify;
 }
@@ -215,14 +217,50 @@ nav .menuItems li a {
   justify-content: space-evenly;
 }
 .lieuxMain .mapLieux iframe {
-  margin: 3rem;
+  margin: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 700px;
-  height: 550px;
+  height: 400px;
 }
 
 .faqMain {
-  padding: 5rem;
+  padding: 1rem;
+  background-image: url(/public/medias/img/background_liberal.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.faqMain h2 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #022e76;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.faqMain .cardsFaq {
+  margin: auto 0;
+}
+.faqMain .cardsFaq .cardFaq {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  margin: 2rem;
+}
+.faqMain .cardsFaq .cardFaq h3 {
+  font-size: 1.5rem;
+  color: #022e76;
+  font-weight: 500;
+  margin: 1rem;
+  font-weight: 600;
+}
+.faqMain .cardsFaq .cardFaq p {
+  font-size: 1rem;
+  color: #022e76;
+  margin: 1rem;
+  text-align: justify;
 }
 
 .informationFooter {
@@ -312,7 +350,7 @@ nav .menuItems li a {
     align-items: center;
     justify-content: space-evenly;
   }
-  .aProposMain .aProposCard .imgAPropos {
+  .aProposMain .aProposCard .imgAPropos img {
     border-radius: 50%;
     width: 22rem;
     margin: 1rem 3rem;
@@ -326,6 +364,33 @@ nav .menuItems li a {
     font-size: 1.3rem;
     color: #022e76;
     text-align: justify;
+  }
+  .txtBold {
+    font-weight: 900;
+  }
+  .lieuxMain {
+    background-color: #f5f5f5;
+    margin: 5rem 10rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .lieuxMain h2 {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: #022e76;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .lieuxMain .txtLieux p {
+    font-size: 1.3rem;
+  }
+  .lieuxMain .mapLieux iframe {
+    margin: 3rem;
+    width: 700px;
+    height: 550px;
+  }
+  .faqMain {
+    padding: 5rem;
   }
 }
 
